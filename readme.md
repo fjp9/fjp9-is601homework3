@@ -12,7 +12,7 @@ In this homeowork I will design my own calculator. The calculator needs to do th
 
 # Homework 4
 
-Added the following fuctionallity:
+Added the following functionality:
 
-1. Added suport for faker by added command, --num_records, to test any number of randomly generated data
-2. Add main.py to support a basic user inteface alowing the user to either add, subtract, multiply, divide two numbers from the command line.
+1.	Added support for faker by added command, --num_records, to test any number of randomly generated data
+2.	Add main.py to support a basic user interface allowing the user to either add, subtract, multiply, divide two numbers from the command line.
