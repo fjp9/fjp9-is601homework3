@@ -2,26 +2,17 @@
 This module contains tests for the calculator operations and Calculation class.
 """
 
-
+# pylint: disable=unused-import
 # pylint: disable=unnecessary-dunder-call, invalid-name
 from decimal import Decimal
 import pytest
 from calculator.calculation import Calculation
 from calculator.operations import add, subtract, multiply, divide
 
-@pytest.mark.parametrize("a, b, operation, expected", [
-    (Decimal('10'), Decimal('5'), add, Decimal('15')),
-    (Decimal('10'), Decimal('5'), subtract, Decimal('5')),
-    (Decimal('10'), Decimal('5'), multiply, Decimal('50')),
-    (Decimal('10'), Decimal('2'), divide, Decimal('5')),
-    (Decimal('10.5'), Decimal('0.5'), add, Decimal('11.0')),
-    (Decimal('10.5'), Decimal('0.5'), subtract, Decimal('10.0')),
-    (Decimal('10.5'), Decimal('2'), multiply, Decimal('21.0')),
-    (Decimal('10'), Decimal('0.5'), divide, Decimal('20')),
-])
 def test_calculation_operations(a, b, operation, expected):
     """
-    Test calculation operations. See @pytest.mark.parametrize for tested instances.
+    Test calculation operations. This test function is parameterized 
+    by the pytest_generate_tests hook in conftest.py.
     
     Parameters:
         a (Decimal): The first operand in the calculation.
