@@ -9,3 +9,10 @@ In this homeowork I will design my own calculator. The calculator needs to do th
 5. It needs to have 100% test coverage, pass pylint, and you need to do your best to not repeat any lines of code.  
 6.  You should use type hints for input parameter types and return types.
 7.  Implement a pytest fixture to test.
+
+# Homework 4
+
+Added the following fuctionallity:
+
+1. Added suport for faker by added command, --num_records, to test any number of randomly generated data
+2. Add main.py to support a basic user inteface alowing the user to either add, subtract, multiply, divide two numbers from the command line.
