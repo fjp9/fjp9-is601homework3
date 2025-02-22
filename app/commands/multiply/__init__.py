@@ -5,6 +5,9 @@ from app.commands import CommandHandler
 
 class MultiplyCommand(Command):
     def execute(self):
-        a, b = input("Enter two numbers separated by space: ").split()
-        CommandHandler.calculate_and_print(a, b, 'multiply')
+        try:
+            a, b = input("Enter two numbers separated by space: ").split()
+            CommandHandler.calculate_and_print(a, b, 'multiply')
+        except ValueError:
+            print("Please enter two numbers separated by space.")
         return
