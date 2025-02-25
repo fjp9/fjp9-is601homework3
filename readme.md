@@ -1,6 +1,6 @@
 # Homework 3
 
-In this homeowork I will design my own calculator. The calculator needs to do the following:
+In this homework I will design my own calculator. The calculator needs to do the following:
 
 1. Add, Subtract, Multiply, and Divide.
 2. Throw exception for divide by zero and test that the exception is thrown.
@@ -16,3 +16,10 @@ Added the following functionality:
 
 1.	Added support for faker by added command, --num_records, to test any number of randomly generated data
 2.	Add main.py to support a basic user interface allowing the user to either add, subtract, multiply, divide two numbers from the command line.
+
+# Homework 5
+
+Added the following functionality:
+
+1.	The app now follows the REPL and command pattern. with support for the following commands: add, subtract, divide, multiply, exit, and menu.
+2.	The commands are automatically loaded using plugins
