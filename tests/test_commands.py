@@ -1,8 +1,6 @@
-"""
-This module contains the test cases for the main module.
-"""
+""" This module contains the test cases for the commands module """
 import pytest
-from main import calculate_and_print  # Ensure this import matches your project structure
+from app.commands import CommandHandler
 
 # Parameterize the test function to cover different operations and scenarios, including errors
 @pytest.mark.parametrize("a_string, b_string, operation_string, expected_string", [
@@ -19,6 +17,6 @@ def test_calculate_and_print(a_string, b_string, operation_string,expected_strin
     """
     Test the calculate_and_print function with different inputs and operations.
     """
-    calculate_and_print(a_string, b_string, operation_string)
+    CommandHandler.calculate_and_print(a_string, b_string, operation_string)
     captured = capsys.readouterr()
     assert captured.out.strip() == expected_string
