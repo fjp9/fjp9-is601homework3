@@ -1,3 +1,4 @@
+import logging
 from abc import ABC, abstractmethod
 from decimal import Decimal, InvalidOperation
 from calculator import Calculator
@@ -29,10 +30,13 @@ class CommandHandler:
                 print(f"Unknown operation: {operation_name}")
         except InvalidOperation:
             print(f"Invalid number input: {a} or {b} is not a valid number.")
+            logging.error("Invalid number input.")
         except ZeroDivisionError:
             print("Error: Division by zero.")
+            logging.error("Division by zero.")
         except Exception as e: # Catch-all for unexpected errors
             print(f"An error occurred: {e}")
+            logging.error(f"An error occurred: {e}")
 
     def register_command(self, command_name: str, command: Command):
         self.commands[command_name] = command
@@ -42,3 +46,4 @@ class CommandHandler:
             self.commands[command_name].execute()
         except KeyError:
             print(f"No such command: {command_name}")
+            logging.error(f"No such command: {command_name}")
