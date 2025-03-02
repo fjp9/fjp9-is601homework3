@@ -23,3 +23,11 @@ Added the following functionality:
 
 1.	The app now follows the REPL and command pattern. with support for the following commands: add, subtract, divide, multiply, exit, and menu.
 2.	The commands are automatically loaded using plugins
+
+# Homework 6
+
+Added the following functionality:
+
+1.	The app now using logging
+2.  Added support for environment variables
+3.	Added github workflows functionality
